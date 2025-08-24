@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\CSS\buildBurger.css">
+    <title>Custom Burger Order</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                 <a href="../Home.html"><img src="..\photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="../home.html"><img src="..\photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                   <a id="order" href="menu.html"><img src="..\photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="order.html"><img src="..\photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="happy moments.html">Happy moments</a></li>
+                        <li><a href="Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Build Your Burger</h1>
+    <form id="burgerForm">
+        <div class="form-group">
+            <label>1. בחר סוג לחם:</label><br>
+            <input type="radio" id="prena" name="bread" value="פרנה" required>
+            <label for="prena">פרנה</label><br>
+            <input type="radio" id="roll" name="bread" value="לחמניה" required>
+            <label for="roll">לחמניה</label><br>
+        </div>
+
+        <div class="form-group">
+            <label>2. בחר כמה גרם בשר:</label><br>
+            <input type="radio" id="150g" name="meat" value="150 גרם" required>
+            <label for="150g">(35 ש"ח) 150 גרם</label><br>
+            <input type="radio" id="220g" name="meat" value="220 גרם" required>
+            <label for="220g">(43 ש"ח) 220 גרם</label><br>
+            <input type="radio" id="300g" name="meat" value="300 גרם" required>
+            <label for="300g"> (50ש"ח) 300 גרם </label><br>
+            <input type="radio" id="450g" name="meat" value="450 גרם" required>
+            <label for="450g">(68 ש"ח) 450 גרם</label><br>
+        </div>
+
+        <div class="form-group">
+            <label>3. מידת עשייה:</label><br>
+            <input type="radio" id="wd" name="doneness" value="WD" required>
+            <label for="wd">WD</label><br>
+            <input type="radio" id="mw" name="doneness" value="MW" required>
+            <label for="mw">MW</label><br>
+            <input type="radio" id="m" name="doneness" value="M" required>
+            <label for="m">M</label><br>
+            <input type="radio" id="mr" name="doneness" value="MR" required>
+            <label for="mr">MR</label><br>
+            <input type="radio" id="r" name="doneness" value="R" required>
+            <label for="r">R</label><br>
+        </div>
+
+        <div class="form-group">
+            <label>4. תבחר ירקות:</label><br>
+            <input type="checkbox" id="lettuce" name="veggies" value="חסה">
+            <label for="lettuce">חסה</label><br>
+            <input type="checkbox" id="tomato" name="veggies" value="עגבנייה">
+            <label for="tomato">עגבנייה</label><br>
+            <input type="checkbox" id="redOnion" name="veggies" value="בצל כחול">
+            <label for="redOnion">בצל סגול</label><br>
+            <input type="checkbox" id="pickle" name="veggies" value="מלפפון חמוץ">
+            <label for="pickle">מלפפון חמוץ</label><br>
+            <input type="checkbox" id="mushrooms" name="veggies" value="פטריות">
+            <label for="mushrooms">פטריות</label><br>
+        </div>
+
+        <div class="form-group">
+            <label>5. עם גבינה?</label><br>
+            <input type="radio" id="cheeseYes" name="cheese" value="כן" onclick="toggleCheeseOptions(true)" required>
+            <label for="cheeseYes">כן</label><br>
+            <input type="radio" id="cheeseNo" name="cheese" value="לא" onclick="toggleCheeseOptions(false)" required>
+            <label for="cheeseNo">לא</label><br>
+        </div>
+
+        <div id="cheeseOptions" style="display:none;">
+            <label>בחר סוג גבינה:</label><br>
+            <input type="checkbox" id="gouda" name="cheeseType" value="גבינת גאודה">
+            <label for="gouda">גבינת גאודה (12 ש"ח)</label><br>
+            <input type="checkbox" id="goudaPesto" name="cheeseType" value="גבינת גאודה פסטו">
+            <label for="goudaPesto">גבינת גאודה פסטו (10 ש"ח)</label><br>
+            <input type="checkbox" id="cheddar" name="cheeseType" value="גבינת צ'דר">
+            <label for="cheddar">גבינת צ'דר (8 ש"ח)</label><br>
+            <input type="checkbox" id="parmesan" name="cheeseType" value="גבינת פרמז'ן רז'יאני">
+            <label for="parmesan">גבינת פרמז'ן רז'יאני (12 ש"ח)</label><br>
+        </div>
+
+        <div class="form-group">
+            <label>6. תוספות עם תוספת תשלום:</label><br>
+            <input type="checkbox" id="avocado" name="extras" value="אבוקדו">
+            <label for="avocado">אבוקדו (5 ש"ח)</label><br>
+            <input type="checkbox" id="pineapple" name="extras" value="אננס">
+            <label for="pineapple">אננס (8 ש"ח)</label><br>
+            <input type="checkbox" id="creamMushrooms" name="extras" value="שמנת פטריות">
+            <label for="creamMushrooms">שמנת פטריות (10 ש"ח)</label><br>
+            <input type="checkbox" id="duck" name="extras" value="חזה אווז">
+            <label for="duck">חזה אווז (8 ש"ח)</label><br>
+            <input type="checkbox" id="asado" name="extras" value="אסאדו">
+            <label for="asado">אסאדו (20 ש"ח)</label><br>
+            <input type="checkbox" id="entrecote" name="extras" value="אנטרקוט">
+            <label for="entrecote">אנטרקוט (15 ש"ח)</label><br>
+        </div>
+
+        <div class="form-group">
+            <label>7. הערות נוספות:</label><br>
+            <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
+        </div>
+
+        <button type="button" onclick="validateForm()">Finish</button>
+    </form>
+
+    <div id="orderSummary" style="display:none;">
+        <h2>Order Summary</h2>
+        <p id="summaryText"></p>
+        <button type="button" onclick="editOrder()">Edit Order</button>
+        <button type="button" onclick="addToCart('Special BURGER',calculateTotal())">Confirm Your Order</button>
+    </div>
+
+    <script src="..\JS\buildBurger.js"></script>
+</body>
+</html>
+

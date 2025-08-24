@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\CSS\menu.css">
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                 <a href="../Home.html"><img src="..\photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="../home.html"><img src="..\photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                   <a id="order" href="menu.html"><img src="..\photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="order.html"><img src="..\photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="happy moments.html">Happy moments</a></li>
+                        <li><a href="Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Menu</h1>
+    <div class="menu">   
+        <div class="menu-item" onclick="showCategory('burgers')">
+            <img src="..\photos\burgers.avif" alt="Burgers">
+            <div class="menu-text">Burgers</div>
+        </div>
+        <div class="menu-item" onclick="showCategory('rolls')">
+            <img src="..\photos\rolls.jpg" alt="Rolls">
+            <div class="menu-text">Rolls</div>
+        </div>
+        <div class="menu-item" onclick="showCategory('salads')">
+            <img src="..\photos\salads.avif" alt="Salads">
+            <div class="menu-text">Salads</div>
+        </div>
+        <div class="menu-item" onclick="showCategory('drinks')">
+            <img src="..\photos\drinks.jpg" alt="Drinks">
+            <div class="menu-text">Drinks</div>
+        </div>
+        <div class="menu-item" onclick="window.location.href='buildBurger.html'">
+            <img src="..\photos\build-burger.avif" alt="Build Your Own Burger">
+            <div class="menu-text">Build your own BURGER !</div>
+        </div>
+    </div>
+
+    <div class="menu-category" id="burgers" style="display:none;">
+        <h2>Burgers</h2>
+        <div class="grid-container">
+            <div class="item" data-price="35" data-name="Crispy Cranch">
+                <img src="..\photos\burg3.jpg" alt="Crispy Cranch">
+                <h3>Crispy Cranch</h3>
+                <p>
+                    חזה עוף בציפוי פיצפוצי אורז, צ’ימיצורי, צ’ילי מתוק, שומשום,
+                    חסה, עגבניה, סלט קולסלו בפרנה.</p>
+                    <h3 class="price">₪ 35.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Crispy Cranch',35)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="45" data-name="Cheesy MIX Burger">
+                <img src="..\photos\burg4.png" alt="Cheesy MIX Burger">
+                <h3>Cheesy MIX Burger</h3>
+                <p> 
+                    המבורגר 150 גרם מ100% בקר טרי, חזה אווז, גבינת גאודה, צ’ימיצ’ורי, איולי חרדל, חסה, עגבניה, בצל סגול ומלפפון חמוץ.</p>
+                 <h3 class="price">₪ 45.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Cheesy MIX Burger',45)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="68" data-name="Asado Burger">
+                <img src="..\photos\burg5.jpg" alt="Asado Burger">
+                <h3>Asado Burger</h3>
+                <p>המבורגר 150 גרם מ 100% בקר טרי, אסאדו מעושן, שמנת פלפלת, שום קונפי, צ’ימיצ’ורי, איולי חרדל ובצל קריספי, מוגש עם תוספת צ’יפס.</p>
+                <h3 class="price">₪ 68.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Asado Burger',68)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="48" data-name="Tokyo Burger">
+                <img src="..\photos\burg6.jpg" alt="Tokyo Burger">
+                <h3>Tokyo Burger</h3>
+                <p>המבורגר 150 גרם מ100% בקר טרי, גבינת גאודה, פטריות מטוגן, בצל מטוגן, נבטים סיניים, צ’ילי טריאקי, שומשום איולי חרדל, חסה, עגבניה, בצל סגול ומלפפון חמוץ.</p>
+                <h3 class="price">₪ 48.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Tokyo Burger',48)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="48" data-name="Knafeh Burger">
+                <img src="..\photos\burg1.jpg" alt="Knafeh Burger">
+                <h3>Knafeh Burger</h3>
+                <p>המבורגר 150 גרם מ100% בקר טרי, כנאפה מוצרלה, ריבת שרי, איולי חרדל, חסה, עגבניה, בצל סגול ומלפפון חמוץ בלחמניה טריה.</p>
+                <h3 class="price">₪ 48.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Knafeh Burger',48)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="43" data-name="Mexicano Burger">
+                <img src="..\photos\burg2.jpg" alt="Mexicano Burger">
+                <h3>Mexicano Burger</h3>
+                <p>מקסיקנו בורגר המבורגר 150 גרם מ 100% בקר טרי, אבוקדו, חלפיניו, בצל קריספי, איולי חרדל, חסה, עגבניה, בצל סגול ומלפפון חמוץ.</p>
+                <h3 class="price">₪ 43.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Mexicano Burger',43)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-category" id="salads" style="display:none;">
+        <h2>Salads</h2>
+        <div class="grid-container">
+            <div class="item" data-price="33" data-name="Cheese Salad">
+                <img src="..\photos\salad4.png" alt="Cheese Salad">
+                <h3>Cheese Salad</h3>
+                <p> גבינת פטה, צ’יפס בטטה, זיתי קלמטה, עגבניות שרי, תערובת חסה, בצל סגול וויניגרט נענע.</p>
+                <h3 class="price">₪ 33.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Cheese Salad',33)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="35" data-name="Quinoa Salad">
+                <img src="..\photos\salad2.jpg" alt="Quinoa Salad">
+                <h3>Quinoa Salad</h3>
+                <p>קינואה אדומה, בורגול, פלפל אדום , מלפפון טרי קצוץ, פטרוזיליה ,חמוציות, שקדים קלויים, שמן זית ולימון.</p>
+                <h3 class="price">₪ 35.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Quinoa Salad',35)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="35" data-name="Crispy Salad">
+                <img src="..\photos\salad.jpg" alt="Crispy Salad">
+                <h3>Crispy Salad</h3>
+                <p>
+                    רצועות שניצל, קרוטונים, זיתי קלמטה, עגבניות שרי, תערובת חסה, בצל סגול, צ’ילי מתוק, שומשום ווינגרט נענע.</p>
+                <h3 class="price">₪ 35.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Crispy Salad',35)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-category" id="drinks" style="display:none;">
+        <h2>Drinks</h2>
+        <div class="grid-container">
+            <div class="item" data-price="7" data-name="משקה תות">
+                <img src="..\photos\7.jpg" alt="משקה תות">
+                <h3>משקה תות </h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('משקה תות',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="משקה ענבים">
+                <img src="..\photos\6.jpg" alt="משקה ענבים">
+                <h3>משקה ענבים</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('משקה ענבים',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="משקה אשכליות">
+                <img src="..\photos\5.jpg" alt="משקה אשכליות">
+                <h3>משקה אשכליות</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('משקה אשכליות',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="mirinda">
+                <img src="..\photos\2.jpg" alt="mirinda">
+                <h3>mirinda</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('mirinda',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="7up">
+                <img src="..\photos\8.jpg" alt="7up">
+                <h3>7up</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('7up',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="cola">
+                <img src="..\photos\3.jpg" alt="cola">
+                <h3>Cola</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('cola',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="zero">
+                <img src="..\photos\4.jpg" alt="zero">
+                <h3>Zero</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('zero',7)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="7" data-name="soda">
+                <img src="..\photos\1.jpg" alt="soda">
+                <h3>Soda</h3>
+                <h3 class="price">₪ 7.00</h3>
+                <button class="add-to-cart" onclick="addToCart('soda',7)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-category" id="rolls" style="display:none;">
+        <h2>Rolls</h2>
+        <div class="grid-container">
+            <div class="item" data-price="33" data-name="Schnitzel Roll">
+                <img src="..\photos\roll3.jpg" alt="Schnitzel Roll">
+                <h3>Schnitzel Roll</h3>
+                <p>רול שניצל שניצל, חסה, עגבניה, סלט קולסלו וצ’ילי מתוק, בטורטיה.</p>
+                <h3 class="price">₪ 33.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Schnitzel Roll',33)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="33" data-name="Chicken Roll">
+                <img src="..\photos\roll2.jpg" alt="Chicken Roll">
+                <h3>Chicken Roll</h3>
+                <p>רצועות חזה עוף, חסה, עגבניה, , סלט קולסלו , וצ’ילי מתוק, בטורטיה.</p>
+                <h3 class="price">₪ 33.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Chicken Roll',33)">Add to Cart</button>
+            </div>
+            <div class="item" data-price="42" data-name="Mexican Roll">
+                <img src="..\photos\roll1.jpg" alt="Mexican Roll">
+                <h3>Mexican Roll</h3>
+                <p>בשר בקר טחון, פלפל ציפוטלה מוגש עם אבוקדו חלפיניו וצ’ימיצורי, גבינת גאודה, בצל מטוגן, מגולגל בטורטיה, ומטוגן.</p>
+                <h3 class="price">₪ 42.00</h3>
+                <button class="add-to-cart" onclick="addToCart('Mexican Roll',42)">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="div-88">
+        <button class="button-88" role="button" onclick="window.location.href='order.html';">CHECK YOUR CART</button>
+    </div>
+
+    <script src="..\JS\menu.js"></script>
+</body>
+</html>
+
+
+
+

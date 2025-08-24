@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Experiences</title>
+    <link rel="stylesheet" href="..\CSS\Experience.css">
+</head>
+<body>
+        <nav>
+            <ul>
+                <li class="logo">
+                    <a href="../Home.html"><img src="..\photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="../home.html"><img src="..\photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                    <a id="order" href="menu.html"><img src="..\photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="order.html"><img src="..\photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="happy moments.html">Happy moments</a></li>
+                        <li><a href="Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <header>
+        <h1>Customers Experiences</h1>
+    </header>
+    <main>
+        <section id="experience-form">
+            <h2>Share Your Experience</h2>
+            <form id="form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="experience">Experience:</label>
+                <textarea id="experience" name="experience" required></textarea>
+
+                <label for="image">Upload an Image:</label>
+                <input type="file" id="image" name="image" accept="image/*">
+
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </section>
+        <section id="experiences">
+            <h2>Customer Stories</h2>
+            <div id="experience-list">
+                <!-- User experiences will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    <script src="..\JS\Experience.js"></script>
+</body>
+</html>

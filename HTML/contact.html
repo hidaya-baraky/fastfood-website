@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="..\CSS\Contact.css">
+
+</head>
+<body class="background">
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                 <a href="../Home.html"><img src="..\photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="../home.html"><img src="..\photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                   <a id="order" href="menu.html"><img src="..\photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="order.html"><img src="..\photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="happy moments.html">Happy moments</a></li>
+                        <li><a href="Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+
+    <div class="contact-container">
+        <div class="contact-form">
+            <h3 id="contact">GET IN TOUCH</h3>
+            <hr>
+            <p>We are available 24/7 by facebook, instagram, e-mail or by phone. You can also use our quick contact form to ask a question about our services that we offer on a regular basis. We would be pleased to answer your questions.</p>
+
+            <form id="contact-form" method="post" action="mailto:hidayabaraky@gmail.com" name="ContactForm">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" placeholder="Your First Name" required size="65" name="Name">
+            
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" placeholder="Your Last Name" required>
+            
+                <label for="telephone">Telephone: 
+                    <input type="tel" size="20" name="Telephone" required pattern="[0-9]{10}" oninput="validatePhoneNumber(this)">
+                    <br>
+                    <input type="checkbox" name="DoNotCall" onclick="EnableDisable(this);"> Please do not call me.
+                </label>
+            
+                <p>What can we help you with?
+                    <select name="Subject">
+                        <option value="">--Select an option--</option>
+                        <option value="Customer Service">Customer Service</option>
+                        <option value="Question">Question</option>
+                        <option value="Comment">Comment</option>
+                        <option value="Consultation">Consultation</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </p>
+            
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="Enter your email" required oninput="validateEmailInput(this)" size="65" name="Email">
+            
+                <label for="address">Address</label>
+                <input type="text" id="address" placeholder="Your Address" required pattern="[a-zA-Z0-9\s,]{5,}" title="Please enter a valid address.">
+            
+                <label for="date">Preferred Contact Date</label>
+                <input type="date" id="date" name="PreferredContactDate" required>
+            
+                <label for="time">Preferred Contact Time</label>
+                <input type="time" id="time" name="PreferredContactTime" required>
+            
+                <label for="message">Your Message</label>
+                <textarea cols="55" name="Comment" id="message" placeholder="Write your message here" required></textarea>
+
+                <label for="attachment">Attachment (Optional):</label>
+                <input type="file" id="attachment" name="Attachment" accept=".jpg, .jpeg, .png, .pdf">
+
+                <p>Rate Our Service: <br><input type="range" min="0" max="10" step="1"  class="width">*</p>
+
+                <p>
+                    <input class="button" type="submit" value="Send Message" name="submit">
+                    <input class="button" type="reset" value="Reset" name="reset">
+                </p>
+            </form>  
+        </div>
+
+        <div class="contact-info">
+            <div class="follow-us">
+                <h3>FOLLOW US</h3>
+                <hr>
+                <div class="social-icons">                           
+                    <a href="https://www.facebook.com/samar_said.12" target="_blank">
+                        <img src="..\photos\Facebook.png" width="30" height="30" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/samar_said.12/?igsh=aGNvcWc5MXRrbXNl" target="_blank">
+                        <img src="..\photos\Instagram.png" width="30" height="30" alt="Instagram">
+                    </a>
+                    <a href="mailto:hidayabaraky@gmail.com">
+                        <img src="..\photos\mail.png" width="30" height="30" alt="Mail">
+                    </a>
+                </div>
+                <h3>PHONE</h3>
+                <hr>
+                <a href="tel:+9720525055805">
+                    <img src="..\photos\phone.png" width="30" height="30" alt="Phone"> +972-525-055-805
+                </a>
+                <h3>ADDRESS</h3>
+                <hr>
+                <a href="https://www.google.com/maps?q=Oranim+College+of+Education,+Tivon+3600600,+Israel" target="_blank">
+                    <img src="..\photos\location.png" width="30" height="30" alt="Location">קרית טבעון, אורנים
+                </a>
+                <h3>OPENING HOURS</h3>
+                <hr>
+                <p>10:00am - 12:00pm</p>
+            </div>
+        </div>
+    </div>
+    <script src="..\JS\FinalProject.js"></script>
+</body>
+</html>

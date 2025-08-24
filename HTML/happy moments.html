@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\CSS\happy moments.css">
+    <title>Happy Moments</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                 <a href="../Home.html"><img src="..\photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="../home.html"><img src="..\photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                   <a id="order" href="menu.html"><img src="..\photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="order.html"><img src="..\photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="happy moments.html">Happy moments</a></li>
+                        <li><a href="Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Happy Moments</h1>
+
+    <h3>NOTE : Click on image to enlarge ...</h3>
+    <div class="gallery">
+        <img src="..\photos\photo1.jpg" alt="Happy Moment 1">
+        <img src="..\photos\photo2.jpg" alt="Happy Moment 2">
+        <img src="..\photos\photo3.jpg" alt="Happy Moment 3">
+        <img src="..\photos\photo4.jpg" alt="Happy Moment 4">
+        <img src="..\photos\photo5.jpg" alt="Happy Moment 5">
+        <img src="..\photos\photo6.jpg" alt="Happy Moment 6">
+        <img src="..\photos\photo 7.jpg" alt="Happy Moment 7">
+        <img src="..\photos\photo8.jpg" alt="Happy Moment 8">
+        <img src="..\photos\photo9.jpg" alt="Happy Moment 9">
+    </div>
+
+    
+    <p class="invitation">
+        You're invited to share your special moments at our restaurant! Send your photos to us via the email on our Contact Us page.
+    </p>
+
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
+
+    <script src="..\JS\happy moments.js"></script>
+</body>
+</html>
+
+
+
+
+
+

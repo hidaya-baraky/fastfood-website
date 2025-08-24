@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\CSS\order.css">
+    <title>My Order</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                 <a href="../Home.html"><img src="..\photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="../home.html"><img src="..\photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                   <a id="order" href="menu.html"><img src="..\photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="menu.html">menu</a></li>
+                        <li><a href="buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="order.html"><img src="..\photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="..\photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="happy moments.html">Happy moments</a></li>
+                        <li><a href="Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+        <h1>סל קניות</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>מוצר</th>
+                <th>מחיר</th>
+                <th>פעולה</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items">
+            <!-- Items will be loaded here dynamically -->
+        </tbody>
+    </table>
+    <p class="total" id="total">סה"כ לתשלום: ₪0</p>
+
+
+    <div id="div-88">
+        <button class="button-52" role="button" onclick="resetCart()">Reset All</button>
+        <button class="button-52" role="button" onclick="window.location.href='menu.html'">Back to MENU</button>
+        <button class="button-52" role="button" onclick="payOrder()">Pay</button>
+    </div>
+    
+    <script src="..\JS\order.js"></script>
+    </body>
+</html>
