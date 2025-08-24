@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\FinalProject.css">
+
+    <title>Fast Food</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo">
+                 <a href="home.html"><img src="photos\logo.png" width="50" height="50" alt="Logo"></a>
+                </li>
+                <li><a href="home.html"><img src="photos\home.png" width="32" height="32" alt="Home Icon">Home</a></li>
+                <li class="dropdown">
+                   <a id="order" href="html/menu.html"><img src="photos\menu.png" width="32" height="32" alt="Menu Icon">Order</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="html/menu.html">menu</a></li>
+                        <li><a href="html/buildBurger.html">Build your own Burger</a></li>
+                    </ul>
+                </li>
+                <li><a href="html\order.html"><img src="photos\order.png" width="32" height="32" alt="Order Icon">Cart</a></li>
+                <li class="dropdown">
+                    <a href="#"><img src="photos\contact.png" width="32" height="32" alt="Contact Icon">About us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="html\contact.html">Contact us</a></li>
+                        <li><a href="html\ourStory.html">Our Story</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><img src="photos\customer.png" width="32" height="32" alt="Contact Icon">Customers</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="html\happy moments.html">Happy moments</a></li>
+                        <li><a href="html\Experience.html">Share your experience</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="slides">
+            <div class="slide"><img src="photos\burger1.png" alt="Image 1"></div>
+            <div class="slide"><img src="photos\crispy.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="photos\salad1.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="photos\burger4.jpg" alt="Image 4"></div>
+            <div class="slide"><img src="photos\burger2.jpg" alt="Image 5"></div>
+            <div class="slide"><img src="photos\burger3.jpg" alt="Image 5"></div>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+
+    <table>
+        <tr>
+            <h1><u>TRY OUR SPECIALS !</h1>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-item">
+                    <img src="photos\mixBurger.png" class="table-img">
+                    <div class="recipe"><p>
+                        המבורגר 220 גרם מ100% בקר טרי, מיקס גבינות,<br>
+                        בטטה קראנץ, איולי חרדל, חסה, עגבניה, בצל סגול ומלפפון חמוץ </p></div>
+                        <h3>צ'יזי מיקס בורגר</h3>
+                        <h3>₪45</h3>
+                    <button onclick="addToCart('Cheesy MIX Burger',45)">Add to Cart</button>
+                </div>
+            </td>
+            <td>
+                <div class="table-item">
+                    <img src="photos\panchta.png" class="table-img">
+                    <div class="recipe"> <p>
+                        המבורגר 150 גרם מ100% בקר טרי, רצועות טלה מעושן, <br>
+                            שמנת פטריות, בצל מטוגן, איולי חרדל, חסה, עגבניה, <br>
+                            בצל סגול ומלפפון חמוץ, מוגש עם תוספת צ‘יפס</p></div>
+                        <h3>פאנצ‘טה בורגר</h3>
+                        <h3>₪65</h3>
+                    <button onclick="addToCart('Panchta Burger',65)">Add to Cart</button>
+                </div>
+            </td>
+            <td>
+                <div class="table-item">
+                    <img src="photos\tokyu.png" class="table-img">
+                    <div class="recipe"><p>
+                        המבורגר 150 גרם מ100% בקר טרי, גבינת גאודה, <br>
+                            פטריות מטוגן, בצל מטוגן, נבטים סיניים, צ‘ילי טריאקי, <br>
+                            שומשום איולי חרדל, חסה, עגבניה, בצל סגול ומלפפון חמוץ.</p>
+                        </div>
+                        <h3>טוקיו בורגר</h3>
+                        <h3>₪48</h3>
+                    <button onclick="addToCart('Tokyo Burger',48)">Add to Cart</button>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="table-item">
+                    <img src="photos\maxicano.png" class="table-img">
+                    <div class="recipe"><p>
+                        המבורגר 150 גרם מ100% בקר טרי, אבוקדו ,שעועית שחורה, <br>
+                            חלפיניו, בצל קריספי, איולי חרדל, חסה, עגבניה,<br>
+                            בצל סגול ומלפפון חמוץ</p>
+                    </div>
+                    <h3>מקסיקאהו בורגר</h3>
+                        <h3>₪43</h3>
+                    <button onclick="addToCart('Mexicano Burger',43)">Add to Cart</button>
+                </div>
+            </td>
+            <td>
+                <div class="table-item">
+                    <img src="photos\downtown.png" class="table-img">
+                    <div class="recipe"><p>
+                        המבורגר 150 גרם מ100% בקר טרי, חזה אווז, <br>
+                        גבינת גאודה, צ‘ימיצ‘ורי, איולי חרדל, חסה, עגבניה, <br>
+                        בצל סגול ומלפפון חמוץ.</p></div>
+                        <h3>דאון טאון בורגר</h3>
+                        <h3>₪45</h3>
+                    <button onclick="addToCart('Down Town Burger',45)">Add to Cart</button>
+                </div>
+            </td>
+            <td>
+                <div class="table-item">
+                    <img src="photos\crispyCranch.png" class="table-img">
+                    <div class="recipe"><p>
+                        חזה עוף בציפוי פיצפוצי אורז<br>
+                        , צ‘ימיצורי, צ‘ילי מתוק, שומשום , חסה, <br>
+                        עגבניה, סלט קולסלו</p></div>
+                        <h3>קריספי קראנץ</h3>
+                        <h3>₪35</h3>
+                    <button onclick="addToCart('Crispy Cranch',35)">Add to Cart</button>
+                </div>
+
+            </td>
+        </tr>
+    </table>
+
+    <div id="div-88">
+        <button class="button-88" role="button" onclick="window.location.href='html/order.html';">CHECK YOUR CART</button>
+    </div>
+
+    <section class="build-section">
+        <h1>BUILD YOUR OWN BURGER !!!</h1>
+        <div class="buildBurger">
+            <img src="photos/buildBurger.png" alt="Build Your Burger">
+        </div>
+
+        <div class="buildBurger">
+            <button onclick="window.location.href='html/buildBurger.html'">Start Building!</button>
+        </div>
+    </section>
+
+    <script src="JS\FinalProject.js"></script>
+</body>
+</html>
